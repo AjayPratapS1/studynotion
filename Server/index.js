@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 dotenv.config();
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 //database connect
 database.connect();
@@ -51,6 +51,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`App is running at the port no ${PORT}`);
+app.listen(port, () => {
+  console.log(`App is running at the port no ${port}`);
 });
