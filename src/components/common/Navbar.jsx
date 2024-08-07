@@ -58,12 +58,12 @@ const Navbar = () => {
                   <IoIosArrowDropdownCircle />
 
                   <div
-                    className="invisible absolute left-[50%]
+                    className={`"invisible absolute left-[50%]
                                     translate-x-[-50%] translate-y-[15%]
-                                 top-[50%] z-10
+                                 ${subLinks.length?"top-[50%]":"top-[100%]"} z-10
                                 flex flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900
                                 opacity-0 transition-all duration-200 group-hover:visible
-                                group-hover:opacity-100 lg:w-[300px]"
+                                group-hover:opacity-100 lg:w-[300px]"`}
                   >
                     <div
                       className="absolute left-[50%] top-0 z-0
@@ -88,7 +88,7 @@ const Navbar = () => {
                         </Link>
                       ))
                     ) : (
-                      <div></div>
+                      <div className="text-xl font-medium text-center animate-pulse">Loading...</div>
                     )}
                   </div>
                 </div>
